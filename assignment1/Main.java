@@ -7,7 +7,7 @@ public class Main {
 
         while (true) {
             System.out.println("Command (add/list/del/exit): ");
-            System.out.print(">");
+            System.out.print("> ");
             String line = scanner.nextLine().trim();
 
             if (line.startsWith("add ")) {
@@ -33,5 +33,6 @@ public class Main {
 
 
         }
+        scanner.close();
     }
 }
