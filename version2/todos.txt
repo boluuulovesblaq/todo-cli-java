@@ -1,5 +1,2 @@
+tea
 food
-water
-run
-pushup
-eat balanced diet

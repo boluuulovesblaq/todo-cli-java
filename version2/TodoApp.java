@@ -33,30 +33,29 @@ public class TodoApp {
         return sum;
     }
 
-            public void saveToFile(String filename) {
-    try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
-        for (String todo : todos) {
-            writer.write(todo);
-            writer.newLine();
-        }
-        System.out.println("Todos saved.");
-    } catch (IOException e) {
-        System.out.println("Error saving file: " + e.getMessage());
+    public void saveToFile(String filename) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+            for (String todo : todos) {
+                writer.write(todo);
+                writer.newLine();
+            }
+            System.out.println("Todos saved.");
+        } catch (IOException e) {
+            System.out.println("Error saving file: " + e.getMessage());
+        }  
     }
-}
 
     // load todos from a file
-     public void loadFromFile(String filename) {
-            todos.clear();
-           try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+    public void loadFromFile(String filename) {
+        todos.clear();
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
            String line;
-           while ((line = reader.readLine()) != null) {
-            todos.add(line.trim());
-          }
-          System.out.println("Todos loaded.");
-       } catch (IOException e) {
-        System.out.println("Error loading file: " + e.getMessage());
+            while ((line = reader.readLine()) != null) {
+                todos.add(line.trim());
+            }
+            System.out.println("Todos loaded.");
+        } catch (IOException e) {
+            System.out.println("Error loading file: " + e.getMessage());
+        }
     }
-}
-        
 }

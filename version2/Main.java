@@ -24,7 +24,7 @@ public class Main {
                 }
             }else if (line.equalsIgnoreCase("save")) {
                      app.saveToFile("todos.txt");
-                } else if (line.equalsIgnoreCase("load")) {
+            } else if (line.equalsIgnoreCase("load")) {
                            app.loadFromFile("todos.txt");
                         } else if (line.equals("exit")) {
                 break;
@@ -33,4 +33,5 @@ public class Main {
             }
         }
     }
+    
 }
